@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile Card</title>
     <link rel="stylesheet" href="./src/style.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    <main>
+    <main data-aos="fade-up" data-aos-duration="1500">
         <article data-testid="test-profile-card" class="profile-card" aria-label="User Profile Card">
             <header class="profile-header"
                 class="row-3"
@@ -48,7 +50,7 @@
                 </div>
             </header>
 
-            <section class="profile-details" aria-label="Additional profile details" data-testid="profile-details">
+            <section data-aos="fade-up" data-aos-duration="1800" class="profile-details" aria-label="Additional profile details" data-testid="profile-details">
                 <section aria-labelledby="hobbies-title" class="profile-hobbies">
                     <h3 id="hobbies-title">Hobbies</h3>
                     <ul data-testid="test-user-hobbies">
@@ -68,7 +70,7 @@
                 </section>
             </section>
 
-            <footer class="card__footer" aria-label="Profile actions" data-testid="card-footer">
+            <footer data-aos="fade-up" data-aos-duration="2000" class="card__footer" aria-label="Profile actions" data-testid="card-footer">
                 <nav class="social" aria-label="Social links" data-testid="social-links">
                     <a href="https://twitter.com/siimidaniels" target="_blank" rel="noopener noreferrer" data-testid="social-link-twitter" aria-label="Twitter profile" role="link">
                         <!-- visible SVG icon has its own data-testid -->
@@ -105,6 +107,15 @@
     </main>
 
     <script src="./src/main.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // animation speed (ms)
+            once: true      // animation runs only once
+        });
+    </script>
+
 </body>
 
 </html>
